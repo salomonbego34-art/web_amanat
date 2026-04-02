@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Skema Website Redaksi Komunitas</title>
+  <style>
+    :root {
+      --bg: #f4f7fb;
+      --card: #ffffff;
+      --primary: #1f4f9a;
+      --accent: #2f8f83;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --border: #d8e0ec;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 24px;
+    }
+
+    header {
+      background: linear-gradient(135deg, var(--primary), #13366b);
+      color: white;
+      border-radius: 14px;
+      padding: 28px;
+      margin-bottom: 24px;
+      box-shadow: 0 10px 30px rgba(19, 54, 107, 0.25);
+    }
+
+    header h1 {
+      margin-bottom: 8px;
+      font-size: 1.8rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 20px;
+    }
+
+    .panel {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 20px;
+      box-shadow: 0 8px 18px rgba(31, 41, 55, 0.06);
+    }
+
+    .panel h2 {
+      margin-bottom: 10px;
+      color: var(--primary);
+      font-size: 1.2rem;
+    }
+
+    .alur {
+      grid-column: span 4;
+    }
+
+    .anggota {
+      grid-column: span 8;
+    }
+
+    .workflow {
+      list-style: none;
+      display: grid;
+      gap: 10px;
+    }
+
+    .workflow li {
+      border: 1px dashed var(--border);
+      border-left: 4px solid var(--accent);
+      border-radius: 8px;
+      padding: 10px 12px;
+      font-size: 0.95rem;
+      background: #f9fcfb;
+    }
+
+    .member-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 14px;
+      margin-top: 12px;
+    }
+
+    .member-card {
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 14px;
+      background: #fff;
+    }
+
+    .avatar {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: #dbe7ff;
+      color: var(--primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .member-card h3 {
+      font-size: 1rem;
+      margin-bottom: 3px;
+    }
+
+    .role {
+      color: var(--accent);
+      font-size: 0.86rem;
+      font-weight: 600;
+    }
+
+    .desc {
+      color: var(--muted);
+      font-size: 0.85rem;
+      margin-top: 6px;
+    }
+
+    footer {
+      margin-top: 20px;
+      color: var(--muted);
+      font-size: 0.86rem;
+      text-align: center;
+    }
+
+    @media (max-width: 880px) {
+      .alur,
+      .anggota {
+        grid-column: span 12;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="container">
+    <header>
+      <h1>Skema Website Redaksi Komunitas</h1>
+      <p>
+        Rancangan ini menampilkan alur kerja redaksi dan anggota komunitas agar pembaca memahami
+        siapa yang berkontribusi pada setiap konten.
+      </p>
+    </header>
+
+    <section class="grid">
+      <article class="panel alur">
+        <h2>Alur Redaksi</h2>
+        <ul class="workflow">
+          <li><strong>1. Usulan Topik:</strong> Komunitas mengirim ide artikel mingguan.</li>
+          <li><strong>2. Kurasi:</strong> Editor memilih topik sesuai fokus publikasi.</li>
+          <li><strong>3. Penulisan:</strong> Penulis menyusun naskah awal.</li>
+          <li><strong>4. Review:</strong> Fact-checker memverifikasi data dan referensi.</li>
+          <li><strong>5. Publikasi:</strong> Tim media sosial mendistribusikan konten.</li>
+        </ul>
+      </article>
+
+      <article class="panel anggota">
+        <h2>Anggota Komunitas Redaksi</h2>
+        <div class="member-grid">
+          <div class="member-card">
+            <div class="avatar">AN</div>
+            <h3>Alya Nabila</h3>
+            <p class="role">Pemimpin Redaksi</p>
+            <p class="desc">Menentukan arah editorial dan validasi akhir sebelum tayang.</p>
+          </div>
+          <div class="member-card">
+            <div class="avatar">RS</div>
+            <h3>Raka Saputra</h3>
+            <p class="role">Editor Konten</p>
+            <p class="desc">Menyunting struktur tulisan agar jelas, padat, dan konsisten.</p>
+          </div>
+          <div class="member-card">
+            <div class="avatar">DN</div>
+            <h3>Dewi Nirmala</h3>
+            <p class="role">Penulis Komunitas</p>
+            <p class="desc">Mengangkat isu lokal komunitas menjadi artikel feature.</p>
+          </div>
+          <div class="member-card">
+            <div class="avatar">FA</div>
+            <h3>Fikri Aditya</h3>
+            <p class="role">Fact-Checker</p>
+            <p class="desc">Memastikan data, kutipan, dan rujukan terverifikasi.</p>
+          </div>
+          <div class="member-card">
+            <div class="avatar">LM</div>
+            <h3>Lina Maharani</h3>
+            <p class="role">Distribusi & Sosial</p>
+            <p class="desc">Mempublikasikan konten ke media sosial dan buletin komunitas.</p>
+          </div>
+          <div class="member-card">
+            <div class="avatar">BK</div>
+            <h3>Bima Kurniawan</h3>
+            <p class="role">Desainer Visual</p>
+            <p class="desc">Menyusun ilustrasi dan infografik pendukung artikel.</p>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <footer>
+      Prototype skema redaksi komunitas • dapat dikembangkan menjadi halaman profil tim dan dashboard publikasi.
+    </footer>
+  </main>
+</body>
+</html>
